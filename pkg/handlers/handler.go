@@ -7,6 +7,10 @@ import (
 	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbiface"
 )
 
+type ErrorBody struct {
+	ErrorMsg *string `json:"error,omitempty"`
+}
+
 var ErrorMethodNotAllowed = "method not allowed"
 
 func GetUser(req events.APIGatewayProxyRequest, tableName string, dynaClient dynamodbiface.DynamoDBAPI) (
