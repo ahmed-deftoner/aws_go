@@ -18,6 +18,6 @@ func UpdateUser() {
 
 }
 
-func DeleteUser() error {
+func DeleteUser() {
 
 }
